@@ -182,16 +182,22 @@
 <h1>Custom lint</h1>
 
 
+<!-- <demo-comp ></demo-comp> -->
 
-      <demo-comp [isActive]="true" [isDisabled]="true" />
 
-      <demo-comp [isActive]="true" [isDisabled]="true" ></demo-comp>
+  <demo-comp myBoolRequired [myDecoratorBoolDefaultTrue]="true" [myDecoratorBoolDefaultFalse]="true"  />
 
-      <demo-comp [isActive]="counter === 3" />
+  <demo-comp myBoolRequired [myBoolDefaultTrue]="true" [myBoolDefaultFalse]="true"  />
 
-      <demo-comp isActive isDisabled />
+  <demo-comp myBoolRequired [myBoolDefaultTrue]="false" [myBoolDefaultFalse]="false"  />
 
-      <demo-comp isActive ></demo-comp>
+  <demo-comp myBoolRequired [myBoolDefaultTrue]="counter === 3" />
+
+  <demo-comp myBoolRequired myBoolDefaultTrue />
+
+  <demo-comp myBoolRequired myBoolDefaultTrue myBoolDefaultFalse />
+
+  <demo-comp myBoolRequired myBoolDefaultTrue ></demo-comp>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

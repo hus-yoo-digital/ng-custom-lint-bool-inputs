@@ -1,5 +1,5 @@
 import { type BooleanInput } from '@angular/cdk/coercion';
-import { booleanAttribute, Component, input } from '@angular/core';
+import { booleanAttribute, Component, Input, input } from '@angular/core';
 
 
 @Component({
@@ -7,20 +7,24 @@ import { booleanAttribute, Component, input } from '@angular/core';
   standalone: true,
   template: `
     <div class="demo-comp">
-      Demo Component - isActive: {{ isActive() }} | isDisabled: {{ isDisabled() }}
+      Demo Component - isActive: {{ myBoolDefaultTrue() }} | isDisabled: {{ myBoolDefaultFalse() }}
     </div>
   `,
 })
 export class DemoCompComponent {
-  // @Input() isActive = false;
-  // @Input() isDisabled = false;
+  @Input() myDecoratorBoolDefaultTrue = false;
+  
+  @Input() myDecoratorBoolDefaultFalse = false;
 
-
-  isActive = input<boolean, BooleanInput>(true, {
+  myBoolDefaultTrue = input<boolean, BooleanInput>(true, {
     transform: booleanAttribute,
   });
 
-  isDisabled = input<boolean, BooleanInput>(true, {
+  myBoolDefaultFalse = input<boolean, BooleanInput>(false, {
+    transform: booleanAttribute,
+  });
+
+  myBoolRequired = input.required<boolean, BooleanInput>({
     transform: booleanAttribute,
   });
 
