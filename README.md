@@ -15,7 +15,7 @@ In aim to be added to `@yoo-digital/eslint-config-angular`
 
 ## Requirements
 
-Inputs, either old decorator or modern signal way must be bool converted : 
+Inputs must be bool converted : 
 
 `booleanAttribute @angular/core`
 
