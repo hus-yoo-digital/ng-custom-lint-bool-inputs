@@ -1,9 +1,3 @@
-// Custom Angular template rule: prefer-boolean-attribute-shorthand
-// Reports usages like: <my-comp [someBool]="true"> or [someBool]="false"
-// Suggests replacing with attribute presence/absence: <my-comp someBool> (true) and <my-comp [someBool]="false"> may be optional removal pattern but rule only warns on literal binding.
-// We only check template bindings (BoundAttribute) whose value AST is a literal boolean.
-// Allow any non-literal expression (computations) like [someBool]="a === b".
-
 'use strict';
 
 const { ESLintUtils } = require('@typescript-eslint/utils');

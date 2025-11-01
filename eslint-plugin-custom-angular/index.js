@@ -1,4 +1,3 @@
-// Custom Angular ESLint plugin exporting prefer-boolean-attribute-shorthand rule
 'use strict';
 
 const preferBooleanAttributeShorthand = require('./rules/prefer-boolean-attribute-shorthand');

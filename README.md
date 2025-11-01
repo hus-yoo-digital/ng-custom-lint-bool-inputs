@@ -1,27 +1,30 @@
 # NgCustomLintV2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.4.
+## Custom lint purpose
 
-## Development server
+In aim to be added to @yoo-digital/eslint-config-angular
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Here a working example of a custom lint rule for Angular, forcing boolean inputs to be shortanded 
 
-## Code scaffolding
+### Examples
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`<myComp [myBoolInput]="true"` must be `<myComp myBoolInput`
 
-## Build
+`<myComp [myBoolInput]="false"` must be `<myComp `
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+`<myComp [myBoolInput]="2+2===4"` is accepted
 
-## Running unit tests
+## Requirements
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Inputs, either old decorator or modern signal way must be bool converted : 
 
-## Running end-to-end tests
+`booleanAttribute @angular/core`
+`BooleanInput @angular/cdk/coercion`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Decorator
 
-## Further help
+`@Input({ transform: booleanAttribute }) myDecoratorBoolDefaultTrue: boolean = true;`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Signal
+
+`myBoolDefaultTrue = input<boolean, BooleanInput>(true, {transform: booleanAttribute,});`
