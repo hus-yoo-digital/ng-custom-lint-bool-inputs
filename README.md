@@ -3,7 +3,6 @@
 ## Custom lint purpose
 
 Working ng example of a custom lint rule, forcing boolean inputs to be shortanded.
-In aim to be added to `@yoo-digital/eslint-config-angular`
 
 ### Examples
 
