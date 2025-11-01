@@ -33,14 +33,10 @@ import { booleanAttribute, Component, Input, input } from '@angular/core';
   `,
 })
 export class DemoComponent {
-  // Decorator style with explicit transform to support attribute presence shorthand
+
   @Input({ transform: booleanAttribute }) myDecoratorBoolDefaultTrue: boolean = true;
 
   @Input({ transform: booleanAttribute }) myDecoratorBoolDefaultFalse: boolean = false;
-
-  // For stricter template type checking (attribute presence), optionally declare accepted types:
-  // static ngAcceptInputType_myDecoratorBoolDefaultTrue: BooleanInput;
-  // static ngAcceptInputType_myDecoratorBoolDefaultFalse: BooleanInput;
 
   myBoolDefaultTrue = input<boolean, BooleanInput>(true, {
     transform: booleanAttribute,

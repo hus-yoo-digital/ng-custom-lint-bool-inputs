@@ -32,3 +32,7 @@ Inputs must be bool converted :
 ### Signal
 
 `myInput = input<boolean, BooleanInput>(true, {transform: booleanAttribute,});`
+
+### Exception
+
+If a required boolean input needs to be false, no choice, `[myRequiredInput]="false"` must be written. Therefore boolean input should never be required.
