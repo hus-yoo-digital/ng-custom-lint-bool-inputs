@@ -13,6 +13,10 @@ In aim to be added to `@yoo-digital/eslint-config-angular`
 
 `<myComp [myBoolInput]="2+2===4"` is accepted
 
+## Linting
+
+Wrong code is yellow underlined in VScode, it can also be raises running : `npm run lint`
+
 ## Requirements
 
 Inputs must be bool converted : 
