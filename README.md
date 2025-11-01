@@ -1,10 +1,9 @@
-# NgCustomLintV2
+# ng custom lint
 
 ## Custom lint purpose
 
-In aim to be added to @yoo-digital/eslint-config-angular
-
-Here a working example of a custom lint rule for Angular, forcing boolean inputs to be shortanded 
+Working ng example of a custom lint rule, forcing boolean inputs to be shortanded.
+In aim to be added to `@yoo-digital/eslint-config-angular`
 
 ### Examples
 
@@ -19,12 +18,13 @@ Here a working example of a custom lint rule for Angular, forcing boolean inputs
 Inputs, either old decorator or modern signal way must be bool converted : 
 
 `booleanAttribute @angular/core`
+
 `BooleanInput @angular/cdk/coercion`
 
 ### Decorator
 
-`@Input({ transform: booleanAttribute }) myDecoratorBoolDefaultTrue: boolean = true;`
+`@Input({ transform: booleanAttribute }) myInput: boolean = true;`
 
 ### Signal
 
-`myBoolDefaultTrue = input<boolean, BooleanInput>(true, {transform: booleanAttribute,});`
+`myInput = input<boolean, BooleanInput>(true, {transform: booleanAttribute,});`
