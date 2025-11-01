@@ -12,7 +12,7 @@ import { booleanAttribute, Component, Input, input } from '@angular/core';
   `,
 })
 export class DemoCompComponent {
-  @Input() myDecoratorBoolDefaultTrue = false;
+  @Input() myDecoratorBoolDefaultTrue = true;
   
   @Input() myDecoratorBoolDefaultFalse = false;
 
