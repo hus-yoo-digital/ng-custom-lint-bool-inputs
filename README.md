@@ -34,4 +34,4 @@ Inputs must be bool converted :
 
 ### Exception
 
-If a required boolean input needs to be false, no choice, `[myRequiredInput]="false"` must be written. Therefore boolean input should never be required.
+If a **required** boolean input needs to be false, no choice, `[myRequiredInput]="false"` must be written. Therefore boolean input should never be required.
