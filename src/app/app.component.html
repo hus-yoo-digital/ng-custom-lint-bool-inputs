@@ -180,6 +180,15 @@
 <main class="main">
   <div class="content">
     <div class="left-side">
+      <!-- Custom rule demo area -->
+      <!-- INVALID (will warn): boolean literal true binding -->
+      <demo-comp [isActive]="true"></demo-comp>
+      <!-- INVALID (will warn unless allowFalseLiteral configured true): boolean literal false binding -->
+      <demo-comp [isDisabled]="false"></demo-comp>
+  <!-- Replace shorthand with binding for build compatibility -->
+  <demo-comp [isActive]="true"></demo-comp>
+      <!-- VALID: expression binding -->
+      <demo-comp [isActive]="counter === 3"></demo-comp>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 982 239"
